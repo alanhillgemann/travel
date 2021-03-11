@@ -1,0 +1,108 @@
+#form {
+    display: grid;
+    grid-row-gap: 0.5em;
+    margin-bottom: 1em;
+}
+
+input {
+    font-size: 1em;
+    margin-bottom: 0.5em;
+}
+
+input:focus {
+    outline-color: #4EB1BA;
+}
+
+input::placeholder {
+    color: #222930;
+}
+
+#error p {
+    color: #ff0000;
+}
+
+#submit {
+    color: #222930;
+    background-color: #4EB1BA;
+    font-size: 1em;
+    font-weight: 800;
+    padding: 0.5em;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+#submit:focus, #submit:hover {
+    background-color: #90CED4;
+    outline: none;
+}
+
+#submit:active {
+    background-color: #90CED4;
+}
+
+#submit:disabled {
+    background-color: #798687;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+#form__search {
+    grid-area: form__search;
+    display: grid;
+    grid-row-gap: 0.5em;
+    grid-auto-rows: minmax(auto, max-content);
+}
+
+#form__results {
+    grid-area: form__results;
+    display: grid;
+    grid-row-gap: 0.5em;
+    grid-template-rows: repeat(6, auto);
+    max-width: 384px;
+}
+
+#results__holder {
+    display: grid;
+    grid-template-columns: auto 4em;
+    grid-template-areas:
+    "destination__image destination__image"
+    "weather__data weather__icon";
+    grid-row-gap: 1em
+}
+
+#destination__image {
+    grid-area: destination__image;
+    position: relative;
+}
+
+#destination__image img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+figcaption.white {
+   color: #E9E9E9;
+   font-weight: 800;
+}
+
+figcaption.top-left {
+   position: absolute;
+   top: 0.5em;
+   left: 0.5em;
+}
+
+#weather__data {
+    grid-area: weather__data;
+    display: grid;
+    grid-row-gap: 0.5em
+}
+
+#weather__data li {
+    line-height: 1.2em;
+}
+
+#weather__icon img {
+    grid-area: weather__icon;
+    max-width: 4em;
+    max-height: 4em;
+}

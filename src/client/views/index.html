@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Travel Planner</title>
+    </head>
+    <body>
+        <header id="header" aria-labelledby="h1">
+            <h1 id="h1">Travel Planner</h1>
+        </header>
+        <main>
+            <section id="form__search" aria-labelledby="h2">
+                <h2 id="h2">Weather search</h2>
+                <form id="form" action="#" aria-label="Search available weather for travel destination and arrival date">
+                    <label for="destination">Destination</label>
+                    <input id="destination" class="field" type="text" placeholder="Location, Country" maxlength="124" required>
+                    <label for="arrival__date">Arrival date</label>
+                    <input id="arrival__date" class="field" type="date" required>
+                    <button id="submit" type="submit" aria-labelledby="form">Search weather</button>
+                </form>
+            </section>
+            <section id="form__results" aria-labelledby="h2">
+                <h2 id="h2">Weather results</h2>
+                <div id="results__holder">
+                    <div id="destination__image">
+                        <img src="../images/default.jpeg" alt="Placeholder destination image">
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer id="footer" aria-label="Copyright">
+            <p>Service provided by:</p>
+            <p><a href="https://www.geonames.org/export/web-services.html#postalCodeSearch">GeoNames</a>, <a href="https://www.weatherbit.io/api/weather-forecast-16-day">WeatherBit</a> and <a href="https://pixabay.com/api/docs/">Pixabay</a></p>
+        </footer>
+        <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js')
+                })
+            }
+        </script>
+    </body>
+</html>
