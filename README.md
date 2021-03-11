@@ -4,8 +4,8 @@
 
 * [About](#about)
 * [Languages](#languages)
-* [Dependencies](#dependencies)
 * [Functionality](#functionality)
+* [Dependencies](#dependencies)
 
 ## About
 
@@ -16,6 +16,25 @@ This project required me to build out a travel app that obtains a desired trip l
 * JavaScript
 * HTML
 * CSS
+
+## Functionality
+
+Create Travel server:
+
+* POST /trip API to obtain trip image and weather results from GeoNames, WeatherBit and Pixabay APIs
+* Serve Travel website
+* Serve default image when Pixabay API returns no images
+* Access GeoNames, WeatherBit and Pixabay API keys via local .env file
+* Log API errors to console
+
+Create Travel website:
+
+* Post trip to Travel server
+* Update trip image and weather results on page
+* Prevent sending multiple requests at once
+* Cache website for offline access
+* Show friendly error message on missing and invalid fields or network failure
+
 
 ## Dependencies
 
@@ -31,6 +50,7 @@ This project required me to build out a travel app that obtains a desired trip l
     * css-minimizer-webpack-plugin
     * dotenv
     * express
+    * file-loader
     * html-webpack-plugin
     * jest
     * mini-css-extract-plugin
@@ -43,13 +63,3 @@ This project required me to build out a travel app that obtains a desired trip l
     * webpack-dev-server
     * webpack
     * workbox-webpack-plugin
-
-## Functionality
-
-Create Travel server:
-
-*
-
-Create Travel website:
-
-*
