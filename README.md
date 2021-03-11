@@ -6,6 +6,7 @@
 * [Languages](#languages)
 * [Functionality](#functionality)
 * [Dependencies](#dependencies)
+* [Installation] (#installation)
 
 ## About
 
@@ -63,3 +64,28 @@ Create Travel website:
     * webpack-dev-server
     * webpack
     * workbox-webpack-plugin
+
+
+## Installation
+
+Dependencies:
+
+* $ npm install
+
+Development mode:
+
+* $ npm run build-dev
+
+Production mode:
+
+* $ npm run build-prod
+* $ npm run start
+
+Test:
+
+* $ npm run test
+
+Browser:
+
+* http://localhost:8081
+
